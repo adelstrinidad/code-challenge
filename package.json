@@ -16,6 +16,14 @@
     "@wdio/spec-reporter": "^6.6.8",
     "@wdio/sync": "^6.6.7",
     "chromedriver": "^86.0.0",
+    "eslint": "^7.11.0",
     "wdio-chromedriver-service": "^6.0.4"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.12.1",
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/register": "^7.12.1",
+    "@wdio/jasmine-framework": "^6.6.6"
   }
 }
