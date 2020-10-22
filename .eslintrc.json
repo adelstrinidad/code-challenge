@@ -1,0 +1,27 @@
+{
+    "plugins": ["wdio"],
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module"
+    },
+    "extends": ["eslint:recommended", "google", "plugin:wdio/recommended"],
+    "env": {
+      "es6": true,
+      "node": true,
+      "jasmine": true
+    },
+    "rules": {
+      // Any override/additional rule that we might need
+      "linebreak-style": 0,
+      "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+      "max-len":0,
+      "new-cap": 1
+  
+    },
+    "globals": {
+      "testData":"readonly",
+      "expect": "readonly",
+      "window":"readonly"
+    }
+  }
+  
