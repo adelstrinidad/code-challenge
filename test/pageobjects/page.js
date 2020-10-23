@@ -12,8 +12,8 @@ export default class Page {
     return path ? browser.url(`/${path}`) : browser.url('/');
   }
   /**
-     *
-     */
+   *
+   */
   waitForPageLoaded() {
     browser.waitUntil(function() {
       const state = browser.execute(function() {

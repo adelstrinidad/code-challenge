@@ -34,12 +34,13 @@ class SearchResultPage extends Page {
    */
   closeDialog() {
     try {
-      this.nextDialog.waitForExist({timeout: 2000});
+      this.nextDialog.waitForExist({timeout: 4000});
+      this.closeNextDialog.click();
     } catch (e) {
-      console.log(e);
+      console.log('there is no cuppon to display');
     }
 
-    this.closeNextDialog.click();
+    // this.closeNextDialog.click();
   }
   /**
    *
@@ -63,7 +64,9 @@ class SearchResultPage extends Page {
  */
   selectItem(itemPosition) {
     super.waitForPageLoaded();
-    this.items[itemPosition - 1].click();
+    const item = this.items[itemPosition - 1];
+    item.waitForClickable({timeout: 5000});
+    item.click();
   }
 }
 
