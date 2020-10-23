@@ -1,21 +1,22 @@
 import Page from './page';
 
 /**
- * sub page containing specific selectors and methods for a specific page
+ * sub page containing specific selectors and methods for HomePage
  */
 class HomePage extends Page {
   /**
-     * define selectors using getter methods
-     */
+   * @return {WebdriverIOElement}  searchKeyBox
+   */
   get searchKeyBox() {return $('#search-key');}
 
-
   /**
-     * a method to encapsule automation code to interact with the page
-     * e.g. to login using username and password
-     */
+   *
+   * @param {String} item the name of the item for searching
+   */
   searchItem(item) {
-    // add method
+    this.searchKeyBox.waitForExist({timeout: 5000});
+    this.searchKeyBox.setValue(item);
+    browser.keys(['Enter']);
   }
 }
 

@@ -16,6 +16,7 @@
     "@wdio/mocha-framework": "^6.6.7",
     "@wdio/spec-reporter": "^6.6.8",
     "@wdio/sync": "^6.6.7",
+    "chai": "^4.2.0",
     "chromedriver": "^86.0.0",
     "eslint": "^7.11.0",
     "eslint-config-prettier": "^6.14.0",
