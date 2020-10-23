@@ -1,5 +1,9 @@
 # Readme
 
+## Feature to Test
+As a Customer we want to see if the second ad from the second results page when searching for "Iphone" on www.aliexpress.com has at least 1 item to be bought.
+
+### Index
 <!-- gen:toc -->
 - [Repo guidelines](#Repo-guidelines)
   * [Installation](#Installation)
