@@ -1,3 +1,6 @@
 node_modules
 .vscode/settings.json
 logs/wdio-selenium-standalone.log
+reports/allure*
+test/reports
+screenshots/*

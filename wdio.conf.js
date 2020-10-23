@@ -143,7 +143,14 @@ exports.config = {
   // Test reporter for stdout.
   // The only one supported by default is 'dot'
   // see also: https://webdriver.io/docs/dot-reporter.html
-  reporters: ['spec'],
+  reporters: [
+    'spec',
+    ['allure', {
+      outputDir: 'reports/allure-results',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
+    }],
+  ],
 
 
   //
@@ -173,6 +180,20 @@ exports.config = {
       */
   before: function(capabilities, specs) {
     global.expect = require('chai').expect;
+  },
+  /**
+       * Function to be executed after a test (in Mocha/Jasmine) or a step (in Cucumber) starts.
+       * @param {Object} test test details
+       * @param {Object} context
+       * @param {Object} testInfo test details
+       */
+  afterTest: function(test, context, {error, result, duration, passed, retries}) {
+    if (test.error !== undefined || error) {
+      const timestamp = Date.now();
+      const pathImg =`./reports/screenshots/screenshot_${timestamp}.png`;
+      browser.saveScreenshot(pathImg);
+      browser.takeScreenshot();
+    }
   },
 
 };

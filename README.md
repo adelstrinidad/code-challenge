@@ -12,7 +12,13 @@ As a Customer we want to see if the second ad from the second results page when 
 <!-- gen:stop -->
 
 ## Repo guidelines
-
+### Technology stack
+- JavaScript ES6
+- NodeJS
+- Webdriverio (latest version)
+- Mocha and Jasmine
+- Chai
+- Allure and Spec for reporting
 
 ### Installation
 #### Requirements

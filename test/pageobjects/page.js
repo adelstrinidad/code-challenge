@@ -31,7 +31,7 @@ export default class Page {
    */
   scrollToDown() {
     browser.execute(function(elSelector) {
-      window.scrollBy(0, 5000);
+      window.scrollBy(0, 4000);
     });
   }
 }
