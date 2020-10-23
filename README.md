@@ -124,3 +124,45 @@ Run:
 ```bash
 npm run test-multibrowser
 ``` 
+
+### Reporters
+
+WebdriverIO uses several different types of test reporters to communicate the results of the tests' executions.<br/>
+The reports to be used are specified on the `Test Configurations` section of the `wdio.conf.js` file as follows:
+```
+
+  reporters: [
+    'spec',
+    ['allure', {
+      outputDir: 'reports/allure-results',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: true,
+    }],
+  ],
+
+```
+
+
+##### Spec
+
+Test reporter, that prints detailed results to console.
+
+##### Allure
+
+The Allure Reporter creates [Allure](http://allure.qatools.ru/) test reports. It is an HTML generated website with all the necessary information to debug your test results and take a look at error screenshots. Allure is added to the reporters array in config file, as well as the output directory of the Allure reports. Please note, this has already been added in the `wdio.config.js` file.
+
+
+
+To generate and view an allure report locally,
+```
+ run npm run report
+ ```
+ 
+ A typical Allure report will look like this:
+
+
+![Screenshot](https://github.com/allure-framework/allure2/blob/master/.github/readme-img.png?raw=true)
+
+
+
+Allure has several other reporting tools optimized for the CI server of your choice. You can [view the documentation here](https://docs.qameta.io/allure/#_reporting).
